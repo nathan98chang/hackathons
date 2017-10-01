@@ -45,6 +45,13 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6AP-3I-edE">
+                                            <rect key="frame" x="320" y="8" width="49" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="userInvited:" destination="MgX-DI-qWE" eventType="valueChanged" id="aPG-lA-PTM"/>
+                                            </connections>
+                                        </switch>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="IKI-RZ-SmR" secondAttribute="trailing" id="4hy-5K-dbb"/>

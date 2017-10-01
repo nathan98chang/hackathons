@@ -10,10 +10,24 @@ import UIKit
 
 class UserTableViewController: UITableViewController {
     
-    //MARK: Properties
-    
     //holds all the users
     var users = [User]()
+    
+    //holds number of users invited
+    var num_invited = 0
+    
+    //MARK: Properties
+    @IBAction func userInvited(_ sender: UISwitch) {
+        if num_invited == 5 {
+            return
+        }
+        
+        //once you invite everyone, you'll constantly keep inviting 4 or 5.
+        //I couldn't figure out how to use the isOn function to prevent this
+        num_invited += 1
+        print("this many invited")
+        print(num_invited)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
