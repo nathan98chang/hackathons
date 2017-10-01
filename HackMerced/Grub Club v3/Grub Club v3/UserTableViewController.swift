@@ -2,7 +2,7 @@
 //  UserTableViewController.swift
 //  Grub Club v3
 //
-//  Created by Brendan Wong on 9/30/17.
+//  Created by Nathan Chang on 9/30/17.
 //  Copyright © 2017 Nathan Chang. All rights reserved.
 //
 
@@ -15,8 +15,6 @@ class UserTableViewController: UITableViewController {
     //holds all the users
     var users = [User]()
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -99,9 +97,14 @@ class UserTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.

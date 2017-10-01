@@ -70,7 +70,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Friends" id="JSa-1Y-JgA">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Why-j5-wZb"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Why-j5-wZb">
+                            <connections>
+                                <action selector="cancel:" destination="MgX-DI-qWE" id="qi1-iq-Wig"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="GCR-Cj-X2t"/>
                     </navigationItem>
                 </tableViewController>
@@ -214,7 +218,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fze-za-40X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1879.2" y="633.73313343328346"/>
+            <point key="canvasLocation" x="1838" y="850"/>
         </scene>
         <!--Pending Ratings-->
         <scene sceneID="sKa-Nn-j7l">
@@ -246,6 +250,14 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mXI-Wn-BUJ" customClass="RatingControl" customModule="Grub_Club_v3" customModuleProvider="target">
                                             <rect key="frame" x="98" y="37" width="252" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                                    <size key="value" width="44" height="44"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </stackView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -262,7 +274,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWU-n3-7be" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="1549.4752623688157"/>
+            <point key="canvasLocation" x="-132" y="1708"/>
         </scene>
         <!--User Profile-->
         <scene sceneID="wg7-f3-ORb">
@@ -279,57 +291,52 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WO-Ig-fAu">
                                 <rect key="frame" x="117" y="29" width="140" height="31.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Nvb-oT-Pl5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Gfp-jy-Shq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gSW-tr-Yjy">
-                                <rect key="frame" x="16" y="90" width="343" height="187"/>
+                                <rect key="frame" x="16" y="89.5" width="343" height="193"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1L-J3-CT0">
-                                        <rect key="frame" x="0.0" y="0.0" width="139" height="27"/>
-                                        <state key="normal" title="Account Credentials"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvF-vr-HrA">
-                                        <rect key="frame" x="0.0" y="37" width="112" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Pending Ratings"/>
                                         <connections>
                                             <segue destination="uMI-nx-IqX" kind="presentation" id="Ien-bz-xmO"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1L-J3-CT0">
+                                        <rect key="frame" x="0.0" y="46" width="139" height="30"/>
+                                        <state key="normal" title="Account Credentials"/>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDo-f0-t0r">
-                                        <rect key="frame" x="0.0" y="77" width="87" height="30"/>
+                                        <rect key="frame" x="0.0" y="86" width="87" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="dfS-nF-RKj"/>
+                                        </constraints>
                                         <state key="normal" title="Notifications"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccx-Jh-KFe">
-                                        <rect key="frame" x="0.0" y="117" width="111" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="1wh-DP-kK5"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="123" width="111" height="30"/>
                                         <state key="normal" title="Privacy Settings"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObC-00-955">
-                                        <rect key="frame" x="0.0" y="157" width="51" height="30"/>
+                                        <rect key="frame" x="0.0" y="163" width="51" height="30"/>
                                         <state key="normal" title="Friends"/>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="BvF-vr-HrA" firstAttribute="top" secondItem="gSW-tr-Yjy" secondAttribute="top" constant="37" id="61L-L0-AOH"/>
-                                    <constraint firstItem="ccx-Jh-KFe" firstAttribute="top" secondItem="gSW-tr-Yjy" secondAttribute="top" constant="117" id="KTP-6S-WIr"/>
-                                    <constraint firstAttribute="bottom" secondItem="ccx-Jh-KFe" secondAttribute="bottom" constant="40" id="cit-Sn-T76"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="gSW-tr-Yjy" secondAttribute="trailing" id="5Cp-WW-Mi6"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="gSW-tr-Yjy" secondAttribute="bottom" constant="341" id="dDP-7J-aa2"/>
-                            <constraint firstItem="gSW-tr-Yjy" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="kL2-bn-RpG"/>
-                            <constraint firstItem="4WO-Ig-fAu" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="9" id="oFq-lx-6pG"/>
-                            <constraint firstItem="4WO-Ig-fAu" firstAttribute="centerX" secondItem="gSW-tr-Yjy" secondAttribute="centerX" id="pab-vx-aJf"/>
-                            <constraint firstItem="gSW-tr-Yjy" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="rjA-zc-IJE"/>
+                            <constraint firstItem="gSW-tr-Yjy" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="26x-W8-UOp"/>
+                            <constraint firstItem="gSW-tr-Yjy" firstAttribute="top" secondItem="4WO-Ig-fAu" secondAttribute="bottom" constant="29" id="YMs-vz-Boq"/>
+                            <constraint firstItem="4WO-Ig-fAu" firstAttribute="centerX" secondItem="gSW-tr-Yjy" secondAttribute="centerX" id="eTD-h6-rpy"/>
+                            <constraint firstItem="gSW-tr-Yjy" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="fnR-01-K4b"/>
+                            <constraint firstItem="4WO-Ig-fAu" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="9" id="z41-pY-GaG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="User Profile" image="second" id="cPa-gy-q4n"/>

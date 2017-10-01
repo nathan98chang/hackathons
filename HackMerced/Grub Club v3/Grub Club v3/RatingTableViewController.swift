@@ -2,11 +2,13 @@
 //  RatingTableViewController.swift
 //  Grub Club v3
 //
-//  Created by Brendan Wong on 9/30/17.
+//  Created by Nathan Chang on 9/30/17.
 //  Copyright © 2017 Nathan Chang. All rights reserved.
 //
 
 import UIKit
+
+import os.log
 
 class RatingTableViewController: UITableViewController {
 
@@ -82,7 +84,7 @@ class RatingTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -90,6 +92,9 @@ class RatingTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
+    
+    
+    
 
 }

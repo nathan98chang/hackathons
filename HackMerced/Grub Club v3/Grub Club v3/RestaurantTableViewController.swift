@@ -2,7 +2,7 @@
 //  RestaurantTableViewController.swift
 //  Grub Club v3
 //
-//  Created by Brendan Wong on 9/30/17.
+//  Created by Nathan Chang on 9/30/17.
 //  Copyright © 2017 Nathan Chang. All rights reserved.
 //
 
